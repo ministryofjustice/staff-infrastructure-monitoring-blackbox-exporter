@@ -1,3 +1,7 @@
+ifneq (,$(wildcard ./.env))
+	include .env
+endif
+
 build:
 	docker build -t pttp-${ENV}-ima-blackbox-exporter .
 
