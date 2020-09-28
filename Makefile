@@ -10,6 +10,7 @@ deploy: build
 	aws ecr get-login-password | docker login --username AWS --password-stdin ${REGISTRY_URL}
 	docker tag pttp-${ENV}-ima-blackbox-exporter:latest ${REGISTRY_URL}/pttp-${ENV}-ima-blackbox-exporter:latest
 	docker push ${REGISTRY_URL}/pttp-${ENV}-ima-blackbox-exporter:latest
+	./scripts/restart_ecs_service.sh
 
 serve:
 	docker run -d -p 9115:9115 --name blackbox-exporter pttp-${ENV}-ima-blackbox-exporter
