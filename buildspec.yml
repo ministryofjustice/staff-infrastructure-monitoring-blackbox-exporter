@@ -12,8 +12,4 @@ phases:
 
   build:
     commands:
-      - |
-          if [ "$ENV" = "development" ]
-          then
-            make deploy
-          fi
+      - make deploy
