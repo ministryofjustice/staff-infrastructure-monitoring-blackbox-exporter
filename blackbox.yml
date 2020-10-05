@@ -6,8 +6,8 @@ modules:
       method: GET
       valid_status_codes: []
       no_follow_redirects: false
-      preferred_ip_protocol: "ip4" # defaults to "ip6"
-      ip_protocol_fallback: false  # no fallback to "ip6"
+      preferred_ip_protocol: ip4 # defaults to "ip6"
+      ip_protocol_fallback: false # no fallback to "ip6"
   icmp:
     prober: icmp
     icmp:
