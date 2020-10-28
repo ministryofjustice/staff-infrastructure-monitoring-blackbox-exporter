@@ -1,4 +1,4 @@
-# PTTP Infrastructure Monitoring and Alerting Platform - Blackbox Exporter
+# Infrastructure Monitoring and Alerting Platform - Blackbox Exporter
 
 ## Table of contents
 
@@ -13,15 +13,13 @@
 
 ## About the project
 
-This project is part of the [Prison Technology Transformation Programme (PTTP)
-Infrastructure Monitoring and Alerting (IMA)
-Platform](https://github.com/ministryofjustice/staff-infrastructure-monitoring).
+This project is part of the [Infrastructure Monitoring and Alerting (IMA) Platform](https://github.com/ministryofjustice/staff-infrastructure-monitoring).
 It holds the Docker image for pulling data from the Physical Devices. [Prometheus](https://prometheus.io/) is used as the
 base image.
 
 ### Our repositories
 
-- [IMA Platform](https://github.com/ministryofjustice/staff-infrastructure-monitoring) - to monitor PTTP infrastructure and physical devices
+- [IMA Platform](https://github.com/ministryofjustice/staff-infrastructure-monitoring) - to monitor MoJ infrastructure and physical devices
 - [Data Source Configuration](https://github.com/ministryofjustice/staff-infrastructure-monitoring-datasource-config) - to provision data sources for the IMA Platform
 - [SNMP Exporter](https://github.com/ministryofjustice/staff-infrastructure-monitoring-snmpexporter) - to scrape data from physical devices (Docker image)
 - [Blackbox Exporter](https://github.com/ministryofjustice/staff-infrastructure-monitoring-blackbox-exporter) - to probe endpoints over HTTP, HTTPS, DNS, TCP and ICMP.s (Docker image)
