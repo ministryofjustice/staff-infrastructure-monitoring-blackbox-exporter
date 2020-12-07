@@ -2,6 +2,9 @@ ifneq (,$(wildcard ./.env))
 	include .env
 endif
 
+authenticate_docker:
+	aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${SHARED_SERVICES_ACCOUNT_ID}.dkr.ecr.eu-west-2.amazonaws.com
+
 build:
 	docker build --build-arg SHARED_SERVICES_ACCOUNT_ID=${SHARED_SERVICES_ACCOUNT_ID} -t pttp-${ENV}-ima-blackbox-exporter .
 
