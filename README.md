@@ -14,8 +14,15 @@
 ## About the project
 
 This project is part of the [Infrastructure Monitoring and Alerting (IMA) Platform](https://github.com/ministryofjustice/staff-infrastructure-monitoring).
-It holds the Docker image for pulling data from the Physical Devices. [Prometheus](https://prometheus.io/) is used as the
-base image.
+It holds the Docker image for pulling data from the Physical Devices.
+
+[Prometheus's blackbox
+exporter](https://github.com/prometheus/blackbox_exporter) is used as the base
+image. It's stored in an AWS ECR repository within the MoJ's Shared Services
+account that is created by the [PTTP Shared Services
+Infrastructure](https://github.com/ministryofjustice/pttp-shared-services-infrastructure)
+and [Staff Device Docker Base
+Images](https://github.com/ministryofjustice/staff-device-docker-base-images) GitHub repositories.
 
 ### Our repositories
 

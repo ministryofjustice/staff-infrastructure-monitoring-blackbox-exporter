@@ -3,7 +3,7 @@ ifneq (,$(wildcard ./.env))
 endif
 
 build:
-	docker build -t pttp-${ENV}-ima-blackbox-exporter .
+	docker build --build-arg SHARED_SERVICES_ACCOUNT_ID=${SHARED_SERVICES_ACCOUNT_ID} -t pttp-${ENV}-ima-blackbox-exporter .
 
 deploy: build
 	echo ${REGISTRY_URL}
