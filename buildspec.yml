@@ -13,4 +13,5 @@ phases:
 
   build:
     commands:
+      - make authenticate_docker
       - make deploy
