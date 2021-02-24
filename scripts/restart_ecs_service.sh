@@ -25,7 +25,11 @@ deploy() {
 }
 
 main() {
-  assume_deploy_role
+  if [ "$CODEBUILD_CI" = "true" ]
+  then
+    assume_deploy_role
+  fi
+
   deploy
 }
 
