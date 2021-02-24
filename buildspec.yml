@@ -15,4 +15,5 @@ phases:
     commands:
       - make authenticate_docker
       - make deploy
-      - make deploy_mojo
+      # To uncomment in tandem with the CIDR range change
+      # - make deploy_mojo
