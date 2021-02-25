@@ -15,6 +15,16 @@ deploy: build
 	docker push ${REGISTRY_URL}/pttp-${ENV}-ima-blackbox-exporter:latest
 	./scripts/restart_ecs_service.sh
 
+build_mojo:
+	docker build --build-arg SHARED_SERVICES_ACCOUNT_ID=${SHARED_SERVICES_ACCOUNT_ID} -t mojo-${ENV}-ima-blackbox-exporter .
+
+deploy_mojo: build
+	echo ${REGISTRY_URL}
+	aws ecr get-login-password | docker login --username AWS --password-stdin ${REGISTRY_URL}
+	docker tag mojo-${ENV}-ima-blackbox-exporter:latest ${REGISTRY_URL}/mojo-${ENV}-ima-blackbox-exporter:latest
+	docker push ${REGISTRY_URL}/mojo-${ENV}-ima-blackbox-exporter:latest
+	./scripts/restart_ecs_service_mojo.sh
+
 serve:
 	docker run -d -p 9115:9115 --name blackbox-exporter pttp-${ENV}-ima-blackbox-exporter
 
