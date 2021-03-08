@@ -3,7 +3,6 @@ version: 0.1
 env:
   parameter-store:
     ROLE_ARN: "/codebuild/pttp-ci-ima-pipeline/$ENV/assume_role"
-    REGISTRY_URL: "/codebuild/pttp-ci-blackbox-exporter-pipeline/$ENV/ecr/endpoint"
     SHARED_SERVICES_ACCOUNT_ID: "/codebuild/staff_device_shared_services_account_id"
 
 phases:
