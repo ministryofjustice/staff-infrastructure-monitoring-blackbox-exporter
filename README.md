@@ -58,11 +58,17 @@ make serve
 
 To manually push an image to your AWS ECR repository:
 
+1. Push an image to ECR
+```
+aws-vault exec moj-pttp-shared-services -- make publish
+```
+
+2. Deploy image to ECS
 ```
 aws-vault exec moj-pttp-dev -- make deploy
 ```
 
-To view your image within the AWS Management Console:
+3. To view your image within the AWS Management Console:
 
 ```
 aws-vault login moj-pttp-dev
