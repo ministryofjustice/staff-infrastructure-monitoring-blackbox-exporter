@@ -17,10 +17,10 @@ publish: build
 publish_mojo: build_mojo
 	ENV=${ENV} ./scripts/deploy.sh blackbox_exporter_repository_v2
 
-deploy: publish
+deploy:
 	./scripts/restart_ecs_service.sh
 
-deploy_mojo: publish_mojo
+deploy_mojo:
 	./scripts/restart_ecs_service_mojo.sh
 
 serve:
