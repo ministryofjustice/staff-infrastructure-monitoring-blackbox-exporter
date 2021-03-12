@@ -18,10 +18,10 @@ publish_mojo: build_mojo
 	ENV=${ENV} ./scripts/deploy.sh blackbox_exporter_repository_v2
 
 deploy:
-	./scripts/restart_ecs_service.sh
+	ENV=${ENV} ./scripts/restart_ecs_service.sh
 
 deploy_mojo:
-	./scripts/restart_ecs_service_mojo.sh
+	ENV=${ENV} ./scripts/restart_ecs_service_mojo.sh
 
 serve:
 	docker run -d -p 9115:9115 --name blackbox-exporter pttp-${ENV}-ima-blackbox-exporter
