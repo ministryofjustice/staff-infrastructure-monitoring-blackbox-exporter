@@ -1,4 +1,6 @@
-REGISTRY_URL=`aws ssm get-parameter --name /terraform_staff_infrastructure_monitoring/$ENV/outputs | jq '.Parameter.Value' | jq -r | jq '.'$1'.value.repository_url' | sed 's/"//g'`
+#!/bin/bash
+
+REGISTRY_URL=`aws ssm get-parameter --name /terraform_staff_infrastructure_monitoring/$ENV/outputs | jq -r .Parameter.Value | jq .blackbox_exporter_repository.value.repository_url | sed 's/"//g'`
 REGISTRY_HOSTNAME=`echo $REGISTRY_URL | cut -d'/' -f 1`
 REGISTRY_PARAM=`echo $REGISTRY_URL | cut -d'/' -f 2`
 
