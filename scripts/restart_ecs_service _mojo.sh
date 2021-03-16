@@ -8,7 +8,6 @@
 set -e
 
 assume_deploy_role() {
-  ROLE_ARN=`aws ssm get-parameter --name /codebuild/pttp-ci-ima-pipeline/$ENV/assume_role | jq '.Parameter.ARN' | sed 's/"//g'`
   TEMP_ROLE=`aws sts assume-role --role-arn $ROLE_ARN --role-session-name ci-ima-deploy-$CODEBUILD_BUILD_NUMBER`
   export AWS_ACCESS_KEY_ID=$(echo "${TEMP_ROLE}" | jq -r '.Credentials.AccessKeyId')
   export AWS_SECRET_ACCESS_KEY=$(echo "${TEMP_ROLE}" | jq -r '.Credentials.SecretAccessKey')
