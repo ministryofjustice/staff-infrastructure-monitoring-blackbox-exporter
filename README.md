@@ -48,6 +48,15 @@ Images](https://github.com/ministryofjustice/staff-device-docker-base-images) Gi
 
 ## Usage
 
+---
+**Note for local development**
+
+ In order to develop locally, ensure you have run the publish_terraform_outputs.sh in the IMA Platform repo. This will save all of your terraform outputs to parameter store (which this repo relies on).
+
+ ---
+
+
+
 ### Running the code for development
 
 To locally run Prometheus:

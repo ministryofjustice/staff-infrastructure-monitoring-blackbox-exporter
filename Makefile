@@ -15,7 +15,7 @@ publish: build
 	ENV=${ENV} ./scripts/deploy.sh blackbox_exporter_repository
 
 publish_mojo: build_mojo
-	ENV=${ENV} ./scripts/deploy.sh blackbox_exporter_repository_v2
+	ENV=${ENV} ./scripts/deploy_mojo.sh blackbox_exporter_repository_v2
 
 deploy:
 	ENV=${ENV} ./scripts/restart_ecs_service.sh
