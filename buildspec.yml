@@ -14,5 +14,6 @@ phases:
     commands:
       - make publish
       - make deploy
-      # To uncomment in tandem with the CIDR range change
-      # - make deploy_mojo
+      - make publish_mojo
+      - make deploy_mojo
+
