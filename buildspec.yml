@@ -14,6 +14,5 @@ phases:
     commands:
       - make publish
       - make deploy
-      - make publish_mojo
-      - make deploy_mojo
+
 

@@ -59,7 +59,7 @@ Images](https://github.com/ministryofjustice/staff-device-docker-base-images) Gi
 
 ### Running the code for development
 
-To locally run Prometheus:
+To locally run Blackbox Exporter:
 
 ```
 make serve
