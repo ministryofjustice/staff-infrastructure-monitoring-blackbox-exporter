@@ -15,8 +15,8 @@ assume_deploy_role() {
 }
 
 deploy() {
-  cluster_name=pttp-${ENV}-ima-ecs-cluster
-  service_name=pttp-${ENV}-ima-blackbox_exporter-ecs-service
+  cluster_name=mojo-${ENV}-ima-ecs-cluster
+  service_name=mojo-${ENV}-ima-blackbox_exporter-ecs-service
 
   aws ecs update-service \
     --cluster $cluster_name \
