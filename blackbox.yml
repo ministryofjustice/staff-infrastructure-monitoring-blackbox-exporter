@@ -10,6 +10,17 @@ modules:
       tls_config:
         insecure_skip_verify: true
       ip_protocol_fallback: false # no fallback to "ip6"
+  http_slow_sites:
+    prober: http
+    timeout: 30s
+    http:
+      method: GET
+      valid_status_codes: []
+      no_follow_redirects: false
+      preferred_ip_protocol: ip4 # defaults to "ip6"
+      tls_config:
+        insecure_skip_verify: true
+      ip_protocol_fallback: false # no fallback to "ip6"
   http_get_pki: # job to check status of enrollment URL
     prober: http
     timeout: 5s
