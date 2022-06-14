@@ -84,3 +84,11 @@ modules:
       preferred_ip_protocol: "ip4" # defaults to "ip6"
       query_name: "internal.network.justice.gov.uk"
       query_type: A
+      
+  protective_dns_probe:
+    prober: dns
+    dns:
+      transport_protocol: "udp" # defaults to "udp"
+      preferred_ip_protocol: "ip4" # defaults to "ip6"
+      query_name: "www.gov.uk"
+      query_type: A
