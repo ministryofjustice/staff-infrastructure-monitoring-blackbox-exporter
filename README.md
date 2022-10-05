@@ -1,3 +1,5 @@
+[![repo standards badge](https://img.shields.io/badge/dynamic/json?color=blue&style=flat&logo=github&labelColor=32393F&label=MoJ%20Compliant&query=%24.result&url=https%3A%2F%2Foperations-engineering-reports.cloud-platform.service.justice.gov.uk%2Fapi%2Fv1%2Fcompliant_public_repositories%2Fstaff-infrastructure-monitoring-blackbox-exporter)](https://operations-engineering-reports.cloud-platform.service.justice.gov.uk/public-github-repositories.html#staff-infrastructure-monitoring-blackbox-exporter "Link to report")
+
 # Infrastructure Monitoring and Alerting Platform - Blackbox Exporter
 
 ## Table of contents
@@ -49,13 +51,12 @@ Images](https://github.com/ministryofjustice/staff-device-docker-base-images) Gi
 ## Usage
 
 ---
+
 **Note for local development**
 
- In order to develop locally, ensure you have run the publish_terraform_outputs.sh in the IMA Platform repo. This will save all of your terraform outputs to parameter store (which this repo relies on).
+In order to develop locally, ensure you have run the publish_terraform_outputs.sh in the IMA Platform repo. This will save all of your terraform outputs to parameter store (which this repo relies on).
 
- ---
-
-
+---
 
 ### Running the code for development
 
@@ -68,11 +69,13 @@ make serve
 To manually push an image to your AWS ECR repository:
 
 1. Push an image to ECR
+
 ```
 aws-vault exec moj-pttp-shared-services -- make publish
 ```
 
 2. Deploy image to ECS
+
 ```
 aws-vault exec moj-pttp-dev -- make deploy
 ```
