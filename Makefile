@@ -10,7 +10,6 @@ authenticate_docker: ## Authenticate docker script
 
 .PHONY: build
 build: ## Docker build image
-	$(MAKE) authenticate_docker
 	docker build --platform linux/amd64 -t mojo-${ENV}-ima-blackbox-exporter .
 
 .PHONY: publish

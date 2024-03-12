@@ -13,4 +13,5 @@ phases:
 
   build:
     commands:
+      - make authenticate-docker
       - make test
