@@ -13,7 +13,6 @@ phases:
 
   build:
     commands:
+      - make authenticate-docker
       - make publish
       - make deploy
-
-
